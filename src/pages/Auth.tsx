@@ -82,15 +82,15 @@ const Auth = () => {
     }
   }, [isLoginSuccess, isRegisterSuccess]);
 
-  //   useEffect(() => {
-  //     if (isLoginError) {
-  //       toast.error((loginError as any).data.message);
-  //     }
+  useEffect(() => {
+    if (isLoginError) {
+      toast.error((loginError as any).data.message);
+    }
 
-  //     if (isRegisterError) {
-  //       toast.error((registerError as any).data.message);
-  //     }
-  //   }, [isLoginError, isRegisterError]);
+    if (isRegisterError) {
+      toast.error((registerError as any).data.message);
+    }
+  }, [isLoginError, isRegisterError]);
 
   return (
     <div className="flex items-center gap-4 m-auto max-w-[1300px]">
